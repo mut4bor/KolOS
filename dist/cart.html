@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="plugins/ellipsis/ellipsis.min.js" defer="defer"></script>
+<link rel="shortcut icon" href="img/icons/favicon.jpg">
+
+
+
+  <title>Корзина</title>
+  <link media="all" rel=" stylesheet" type="text/css" href="cart.css">
+	<script type="text/javascript" src="script_cart.js" defer="defer"></script>
+</head>
+
+<body>
+	<!-- Шапка -->
+<header class="header-cart" id="header-cart">
+  <a href="index.html" class="header-cart__logo header-cart__item">
+    <img src="img/icons/favicon.jpg" alt="KolOS">
+    <p>
+      KolOS/экологичный гардероб детям и <br>
+      будущим мамам
+    </p>
+  </a>
+  <div class="header-cart__tel header-cart__item">
+    <a href="tel:+79650735865">+7 (965) 073-58-65</a>
+  </div>
+</header>
+
+  <div class="main">
+    <div class="cart__container container">
+
+
+      <div class="basket-content">
+        <h1>Корзина</h1>
+        <!-- <div>
+          <input id="basket-content__main-checkbox" class="basket-content__main-checkbox checkbox" type="checkbox">
+          <label for="basket-content__main-checkbox">Выбрать все</label>
+        </div> -->
+
+        <div class="basket-content__elements">
+
+          <!-- <input id="basket-content__fst-checkbox" class="checkbox" type="checkbox">
+          <label for="basket-content__fst-checkbox"></label> -->
+          <img src="../img/IMG_1744.JPEG" alt="">
+
+
+          <div class="basket-content__text">
+            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima corporis porro
+              culpa sit
+              asperiores fugiat
+              harum corrupti praesentium, reprehenderit unde consequuntur tempora animi minus a facilis id quis expedita
+              mollitia!
+            </a>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+
+          <div class="cart__plus-minus plus-minus">
+    <div class="" data-action="minus">−</div>
+    <div class="" data-counter>1</div>
+    <div class="" data-action="plus">+</div>
+</div>
+
+
+          <div class="price">
+
+            <p class="price__basic">1267</p>
+            <!-- <p class="price__discount">1980</p> -->
+          </div>
+        </div>
+
+        <div class="basket-content__elements">
+          <!-- <input id="basket-content__snd-checkbox" class="checkbox" type="checkbox">
+          <label for="basket-content__snd-checkbox"></label> -->
+          <img src="../img/IMG_1744.JPEG" alt="">
+          <div class="basket-content__text">
+            <a href="">Lorem ipsum dolor sit amet.</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis debitis natus maiores. Nulla aperiam, qui fugiat saepe enim, doloremque ad voluptatem illo ea eum ut atque assumenda repudiandae magni.</p>
+          </div>
+					<br>
+          <div class="cart__plus-minus plus-minus">
+    <div class="" data-action="minus">−</div>
+    <div class="" data-counter>1</div>
+    <div class="" data-action="plus">+</div>
+</div>
+          <div class="price">
+						<p class="price__basic">1190</p>
+            <!-- <p class="price__discount">1626</p> -->
+          </div>
+        </div>
+      </div>
+      <div class="basket-price">
+
+
+        <div class="basket-price__total basket-price__price">
+          <h3>Итого</h3>
+          <h3>0</h3>
+        </div>
+        <!-- <p></p>
+        <div class="basket-price__discount basket-price__price">
+          <p>Скидки: </p>
+          <p></p>
+        </div> -->
+        <div class="promo-code">
+          <input class="promo-code__input" type="text" placeholder="Промокод">
+          <div class="promo-code__accept">Применить</div>
+        </div>
+        <a href="" class="basket-price__sign">Перейти к оформлению</a>
+
+        <div class="basket-price__terms">
+          <svg class="">
+            <use xlink:href="#checkmark"></use>
+          </svg>
+
+          <div class="basket-price__description">
+            <span>Согласен с условиями </span><a href="">Правил пользования торговой площадкой </a>
+            <span>и</span><a href=""> правилами возврата</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="basket-delivery">
+        <h1>Способ получения</h1>
+        <button>+ Выбрать способ получения</button>
+      </div>
+
+      <div class="basket-payment">
+        <h1>Способ оплаты</h1>
+        <button>+ Выбрать способ оплаты</button>
+      </div>
+
+      <div class="basket-personal-info">
+        <h1>Ваши данные</h1>
+
+        <div class="basket-personal-info__name">
+          <label for="name">Имя</label>
+          <input id="name" type="text">
+        </div>
+        <div class="basket-personal-info__surname">
+          <label for="secondname">Фамилия</label>
+          <input id="secondname" type="text">
+        </div>
+
+        <div class="basket-personal-info__mobile">
+          <label for="phone">Контактный телефон</label>
+          <input id="phone" type="tel">
+        </div>
+
+        <div class="basket-personal-info__email">
+          <label for="email">Электронная почта</label>
+          <input id="email" type="email">
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+    <!-- Подвал -->
+<footer class="footer">
+	<div class="footer__top">
+		<img src="img/icons/favicon.jpg" alt="">
+		<p>KolOS/экологичный гардероб детям и будущим мамам</p>
+		<p>Товары для детей</p>
+	</div>
+   <a href="https://t.me/mut4bor" target="_blank">Created: t.me/mut4bor</a>
+</footer>
+</div></body>
+
+</html>

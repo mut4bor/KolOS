@@ -1,0 +1,39 @@
+$bg-color: #f9f9f9;
+$bp-1024: 1024px;
+$header-height-def: 70px;
+$header-height-1200: 130px;
+$header-height-1024: 50px;
+$container-w: 100%;
+$main-block-w: 60%;
+$header-link-color-active: #272727;
+$header-link-color: #7c7c7c;
+$discount-color: rgb(255, 0, 0, 0.7);
+$pink-button:  #D5AFAE;
+
+
+
+@import "nullStyle";
+@import "fonts";
+@import "header";
+@import "footer";
+@import "backdrop";
+@import "checkbox";
+@import "scrollbar";
+@import "card";
+@import "counter";
+@import "header_cart";
+
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat-Bold', sans-serif;
+}
+
+body {
+  background: $bg-color;
+	&.active {
+		overflow: hidden;
+	}
+}
