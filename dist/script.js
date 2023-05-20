@@ -1,16 +1,29 @@
 //* Functions
-// import Swiper from '../node_modules/swiper/swiper';
-// const swiper = new Swiper();
 
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+	autoHeight: true,
 
-// new Swiper('.start-block__slider', {
-
-// 	navigation: {
-// 		nextEl: '.start-block__right-arrow',
-// 		prevEl: '.start-block__left-arrow'
-// 	},
 	
-// });
+  // // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
+
 
 
 
@@ -29,9 +42,6 @@ function debounce(func, wait, immediate) {
     if (callNow) func.apply(context, args);
   };
 }
-
-$(function () {
-});
 
 function headerChanger() {
   if (window.pageYOffset == 0) {
@@ -97,49 +107,20 @@ btn.addEventListener("click", function () {
 });
 
 function showMore() {
-		if (btn.classList.contains("active")) {
-			btn.textContent = "Скрыть";
-			if (document.documentElement.clientWidth > 1024) {
-				document
-				.querySelectorAll(".services-block__item:nth-child(n+6)")
-				.forEach(function (e) {
-					e.style.display = "block";
-				});
-			}
-			else {
-				document
-				.querySelectorAll(".services-block__item:nth-child(n+5)")
-				.forEach(function (e) {
-					e.style.display = "block";
-				});
-			}
-			
-		} else {
-			if (document.documentElement.clientWidth > 1024) {
-				btn.textContent = "Показать больше";
-			document
-				.querySelectorAll(".services-block__item:nth-child(n+6)")
-				.forEach(function (e) {
-					e.style.display = "none";
-				});
-			}
-			else {
-				btn.textContent = "Показать больше";
-			document
-				.querySelectorAll(".services-block__item:nth-child(n+5)")
-				.forEach(function (e) {
-					e.style.display = "none";
-				});
-			}
-		}
+  if (btn.classList.contains("active")) {
+    btn.textContent = "Скрыть";
+
+		document.querySelectorAll('.services-block__item').forEach(function(e){
+			e.classList.add('active')
+		});
+
+  } else {
+    btn.textContent = "Показать больше";
+		document.querySelectorAll('.services-block__item').forEach(function(e){
+			e.classList.remove('active')
+		});
+  }
 }
-
-
-window.addEventListener("resize", function() {showMore()});
-
-
-
-
 
 //! клик по отзывам
 // let revContDiv = document.querySelectorAll('.review-block__slider div')
@@ -148,17 +129,6 @@ window.addEventListener("resize", function() {showMore()});
 // 		document.querySelector('.review-block__container').classList.add('active')
 // 	})
 // });
-
-
-Ellipsis({
-	ellipsis: '…',
-	debounce: 30,
-	responsive: true,
-	className: '.services-block__name',
-	lines: 1,
-	portrait: null,
-	break_word: false
-	});
 
 debounce(headerChanger(), 300);
 debounce(linkChanger(), 300);

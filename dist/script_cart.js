@@ -106,23 +106,5 @@ window.addEventListener('click', function (e) {
     }
 });
 
-Ellipsis({
-	ellipsis: '…',
-	debounce: 300,
-	responsive: true,
-	className: '.basket-content__a',
-	lines: 3,
-	portrait: null,
-	break_word: false
-	});
-	Ellipsis({
-	ellipsis: '…',
-	debounce: 300,
-	responsive: true,
-	className: '.basket-content__p',
-	lines: 1,
-	portrait: null,
-	break_word: false
-	});
 	data()
 	priceCounter()

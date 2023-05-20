@@ -4,16 +4,15 @@
     @@include('parts/head.html')
     <title>KolOS</title>
     <link media="all" rel=" stylesheet" type="text/css" href="style.css" />
-		<script type="text/javascript" src="card.js" defer></script>
-		<script type="text/javascript" src="counter.js" defer></script>
+    <script type="text/javascript" src="card.js" defer></script>
+    <script type="text/javascript" src="counter.js" defer></script>
     <script type="text/javascript" src="script.js" defer></script>
   </head>
 
   <body>
-    @@include('parts/icons.html') 
-		@@include('parts/backdrops.html')
+    @@include('parts/icons.html') @@include('parts/backdrops.html')
     @@include('parts/header.html')
-		<!--TODO: ПОМЕНЯТЬ ВСЕ СЛАЙДЕРЫ НА СВАЙПЕР, СДЕЛАТЬ АДАПТИВ КОРЗИНЫ И КАРТОЧКИ ТОВАРА, РАЗОБРАТЬСЯ С ГРИДОМ ЕБАНЫМ -->
+    <!--TODO: ПОМЕНЯТЬ ВСЕ СЛАЙДЕРЫ НА СВАЙПЕР, СДЕЛАТЬ АДАПТИВ КОРЗИНЫ И КАРТОЧКИ ТОВАРА, РАЗОБРАТЬСЯ С ГРИДОМ ЕБАНЫМ -->
     <div class="container">
       <div class="start-block main-block section">
         <div class="start-block__image">
@@ -29,19 +28,19 @@
           </p>
         </div>
 
-        <div class="main-block__item start-block__item">
-          <div class="start-block__slider">
-            <p>Бесшовные модели для чувствительной кожи</p>
-            <p>Натуральный состав с влагоотведением</p>
-            <p>Удобство анатомической посадки</p>
-            <p>Бесплатная доставка при заказе от 5000 рублей</p>
-            <p>Мы воплотим Вашу мечту, если ее еще никто не создал!</p>
+        <div class="main-block__item start-block__item swiper">
+          <div class="start-block__slider swiper-wrapper">
+            <p class="swiper-slide">Бесшовные модели для чувствительной кожи</p>
+            <p class="swiper-slide">Натуральный состав с влагоотведением</p>
+            <p class="swiper-slide">Удобство анатомической посадки</p>
+            <p class="swiper-slide">Бесплатная доставка при заказе от 5000 рублей</p>
+            <p class="swiper-slide">Мы воплотим Вашу мечту, если ее еще никто не создал!</p>
           </div>
 
-          <svg class="start-block__left-arrow start-block__arrow">
+          <svg class="start-block__left-arrow start-block__arrow swiper-button-prev">
             <use xlink:href="#arrow"></use>
           </svg>
-          <svg class="start-block__right-arrow start-block__arrow">
+          <svg class="start-block__right-arrow start-block__arrow swiper-button-next">
             <use xlink:href="#arrow"></use>
           </svg>
         </div>
@@ -76,7 +75,9 @@
             <div class="services-block__image">
               <img class="" src="img/IMG_6859.JPG" alt="" />
             </div>
-            <div class="services-block__name">Капор с удлиненной манишкой</div>
+            <div class="services-block__name">
+              Капор с удлиненной манишкой Капор с удлиненной манишкой
+            </div>
             <div class="services-block__price">
               <div class="services-block__discount"></div>
               <div class="services-block__real-price">6 500 ₽</div>
@@ -227,10 +228,17 @@
             <a href="tel:+79650735865" class="contacts-block__link"
               >+7 (965) 073-58-65</a
             >
-            <a href="https://vk.com/kolosrf" class="contacts-block__link" target="_blank">Мы ВКонтакте</a
+            <a
+              href="https://vk.com/kolosrf"
+              class="contacts-block__link"
+              target="_blank"
+              >Мы ВКонтакте</a
             >
-            <a href="https://t.me/kolosrf" class="contacts-block__link"
-						target="_blank">Мы в Telegram</a
+            <a
+              href="https://t.me/kolosrf"
+              class="contacts-block__link"
+              target="_blank"
+              >Мы в Telegram</a
             >
             <a
               href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.367337%2C59.850094&mode=routes&origin=jsapi_2_1_79&rtext=~59.851001%2C30.362015&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NjkyMhJX0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JLQuNGC0LXQsdGB0LrQuNC5INC%2F0YDQvtGB0L%2FQtdC60YIsIDQ30LoyIgoNZ%2BXyQRVsZ29C&z=14"
