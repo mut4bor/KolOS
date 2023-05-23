@@ -8,6 +8,7 @@
     pointer-events: none;
     transition: opacity 0.3s ease;
     transition-delay: 0.05s;
+		z-index: 3;
     &.active {
         opacity: 1;
         pointer-events: all;
@@ -16,10 +17,8 @@
 
 .backdrop-black {
     background: rgba(0, 0, 0, 0.7);
-    z-index: 4;
 }
 
 .backdrop-white {
     background: #fff;
-    z-index: 3;
 }

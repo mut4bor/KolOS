@@ -6,7 +6,7 @@
 	})
 
 	document.querySelectorAll('.price p').forEach(function(e) {
-		e.innerHTML = e.innerHTML+' ₽';
+		e.innerHTML = '<p>' + e.innerHTML + '</p>'+ '<p>руб</p>';
 	});
 
 
@@ -27,7 +27,7 @@
 			const currentPrice = parseInt(amount.innerText) * parseInt(price.dataset.price)
 			totalPrice += currentPrice
 		})
-		document.querySelector('.basket-price__total h3:nth-child(2)').innerText = totalPrice+' ₽'
+		document.querySelector('.basket-price__total div').innerHTML = '<h3>' + totalPrice + '</h3>' + '<p>руб</p>'
 	}
 
 
@@ -54,7 +54,7 @@ window.addEventListener('click', function (e) {
     if (e.target.dataset.action === 'plus') {
         counter.innerText = ++counter.innerText;
 				
-				basicPrice.innerText = basicPrice.dataset.price * parseInt(counter.innerText)+' ₽'
+				basicPrice.innerHTML = basicPrice.dataset.price * parseInt(counter.innerText)+ '<p>руб</p>'
 				priceCounter();
     }
 
@@ -69,7 +69,7 @@ window.addEventListener('click', function (e) {
             toCart = tgglBtn.querySelector('.add-to-cart__to-cart');
             toCart.classList.toggle('active')
         }
-				basicPrice.innerText = basicPrice.dataset.price * parseInt(counter.innerText)+' ₽'
+				basicPrice.innerHTML = basicPrice.dataset.price * parseInt(counter.innerText)+ '<p>руб</p>'
 				priceCounter();
     }
 

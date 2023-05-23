@@ -191,21 +191,28 @@
           </p>
         </div>
 
-        <div class="main-block__item start-block__item swiper">
-          <div class="start-block__slider swiper-wrapper">
-            <p class="swiper-slide">Бесшовные модели для чувствительной кожи</p>
-            <p class="swiper-slide">Натуральный состав с влагоотведением</p>
-            <p class="swiper-slide">Удобство анатомической посадки</p>
-            <p class="swiper-slide">Бесплатная доставка при заказе от 5000 рублей</p>
-            <p class="swiper-slide">Мы воплотим Вашу мечту, если ее еще никто не создал!</p>
+        <div class="start-block__item start-block__swiper main-block__item swiper">
+          <div class="start-block__swiper-button-prev swiper-button-prev"></div>
+          <div class="start-block__swiper-button-next swiper-button-next"></div>
+          <div class="start-block__swiper-wrapper swiper-wrapper">
+            <div class="start-block__swiper-slide swiper-slide">
+              <p>Бесшовные модели для чувствительной кожи</p>
+            </div>
+            <div class="start-block__swiper-slide swiper-slide">
+              <p>Натуральный состав с влагоотведением</p>
+            </div>
+            <div class="start-block__swiper-slide swiper-slide">
+              <p>Удобство анатомической посадки</p>
+            </div>
+            <div class="start-block__swiper-slide swiper-slide">
+              <p>Бесплатная доставка при заказе от 5000 рублей</p>
+            </div>
+            <div class="start-block__swiper-slide swiper-slide">
+              <p>Мы воплотим Вашу мечту, если ее еще никто не создал!</p>
+            </div>
           </div>
 
-          <svg class="start-block__left-arrow start-block__arrow swiper-button-prev">
-            <use xlink:href="#arrow"></use>
-          </svg>
-          <svg class="start-block__right-arrow start-block__arrow swiper-button-next">
-            <use xlink:href="#arrow"></use>
-          </svg>
+          <div class="start-block__swiper-pagination swiper-pagination"></div>
         </div>
       </div>
 
@@ -348,27 +355,23 @@
         <div class="review-block__heading main-block__item">
           <h1>Отзывы</h1>
         </div>
-        <div class="review-block__container">
-          <div class="review-block__slider main-block__item">
-            <div class="review-block__img">
+        <div class="review-block__container review-block__swiper swiper">
+          <div class="review-block__swiper-wrapper main-block__item swiper-wrapper">
+            <div class="review-block__img review-block__swiper-slide swiper-slide">
               <img class="" src="img/review/2wmNnarEdeg.jpg" alt="">
             </div>
-            <div class="review-block__img">
+            <div class="review-block__img review-block__swiper-slide swiper-slide">
               <img class="" src="img/review/FZLlYWfNFIo.jpg" alt="">
             </div>
-            <div class="review-block__img">
+            <div class="review-block__img review-block__swiper-slide swiper-slide">
               <img class="" src="img/review/MAQ1nkbg7co.jpg" alt="">
             </div>
-            <div class="review-block__img">
+            <div class="review-block__img review-block__swiper-slide swiper-slide">
               <img class="" src="img/review/vP3KJbIYn5k.jpg" alt="">
             </div>
           </div>
-          <svg class="review-block__left-arrow review-block__arrow">
-            <use xlink:href="#arrow"></use>
-          </svg>
-          <svg class="review-block__right-arrow review-block__arrow">
-            <use xlink:href="#arrow"></use>
-          </svg>
+          <div class="review-block__swiper-button-prev swiper-button-prev"></div>
+          <div class="review-block__swiper-button-next swiper-button-next"></div>
         </div>
       </div>
 
@@ -382,38 +385,48 @@
           </div>
 
           <div class="contacts-block__social main-block__item">
-            <a href="tel:+79650735865" class="contacts-block__link">+7 (965) 073-58-65</a>
             <a href="https://vk.com/kolosrf" class="contacts-block__link" target="_blank">Мы ВКонтакте</a>
             <a href="https://t.me/kolosrf" class="contacts-block__link" target="_blank">Мы в Telegram</a>
-            <a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.367337%2C59.850094&mode=routes&origin=jsapi_2_1_79&rtext=~59.851001%2C30.362015&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NjkyMhJX0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JLQuNGC0LXQsdGB0LrQuNC5INC%2F0YDQvtGB0L%2FQtdC60YIsIDQ30LoyIgoNZ%2BXyQRVsZ29C&z=14" class="contacts-block__link">Витебский проспект 47 / 2, Санкт-Петербург</a>
+            <a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.367337%2C59.850094&mode=routes&origin=jsapi_2_1_79&rtext=~59.851001%2C30.362015&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NjkyMhJX0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JLQuNGC0LXQsdGB0LrQuNC5INC%2F0YDQvtGB0L%2FQtdC60YIsIDQ30LoyIgoNZ%2BXyQRVsZ29C&z=14" class="contacts-block__link">Адрес самовывоза</a>
+            <a href="tel:+79650735865" class="contacts-block__link">Ольга — +7 (965) 073-58-65</a>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-  <div class="card__image">
-    <img src="img/IMG_3257.JPEG" alt="">
-    <svg class="card__arrow card__left-arrow">
-      <use xlink:href="#arrow"></use>
-    </svg>
-    <svg class="card__arrow card__right-arrow">
-      <use xlink:href="#arrow"></use>
-    </svg>
-    <div class="card__border card__left-border"></div>
-    <div class="card__border card__right-border"></div>
-  </div>
-
-  <div class="card__description">
-    <div class="card__header header-card">
-      <p class="header-card__heading">Шарф «Облачко»</p>
-      <div class="card__price header-card__price">
-        <p class="header-card__price-discount">1 500 ₽</p>
-				<div>
-					<p class="header-card__price-current">750 ₽</p>
-					<p class="header-card__price-difference">-50%</p>
-				</div>
+  <div class="card__wrapper">
+    <div class="card__image swiper">
+      <div class="card__image-swiper-wrapper swiper-wrapper">
+        <div class="card__swiper-slide swiper-slide">
+          <img src="img/IMG_3257.JPEG" alt="">
+        </div>
+        <div class="card__swiper-slide swiper-slide">
+          <img src="img/IMG_3257.JPEG" alt="">
+        </div>
+        <div class="card__swiper-slide swiper-slide">
+          <img src="img/IMG_3257.JPEG" alt="">
+        </div>
+        <div class="card__swiper-slide swiper-slide">
+          <img src="img/IMG_3257.JPEG" alt="">
+        </div>
+        <div class="card__swiper-slide swiper-slide">
+          <img src="img/IMG_3257.JPEG" alt="">
+        </div>
       </div>
-      <div class="header-card__counter"><div class="add-to-cart">
+      <div class="card__image-pagination swiper-pagination"></div>
+      <div class="card__image-swiper-button-next swiper-button-next"></div>
+      <div class="card__image-swiper-button-prev swiper-button-prev"></div>
+    </div>
+
+    <div class="card__description">
+      <div class="card__header header-card">
+        <p class="header-card__heading">Шарф «Облачко»</p>
+        <div class="card__price header-card__price">
+          <p class="header-card__price-current">750 ₽</p>
+          <p class="header-card__price-discount">1 500 ₽</p>
+        </div>
+        <div class="header-card__counter">
+          <div class="add-to-cart">
     <div class="add-to-cart__to-cart">
 			<p>В корзину</p>	
 		</div>
@@ -423,46 +436,92 @@
         <div class="add-to-cart__counter counter" data-counter>1</div>
         <div class="add-to-cart__control-btn control-btn" data-action="plus">+</div>
     </div>
-</div></div>
-    </div>
-    <div class="card__info info-card">
-      <p class="info-card__heading">Информация:</p><br>
-      <p class="info-card__content">
-        Шарф «Облачко» станет незаменимым аксессуаром к яркому образу. Легкий,
-        воздушный, не теряет цвет и не выцветает. Можно стирать в стиральной
-        машине. В наличии - алый.
-      </p>
-      <p class="info-card__show-more">Смотреть всю информацию</p>
-    </div>
-    <div class="card__other other-card">
-      <p class="other-card__heading">Другие товары</p>
-      <div class="other-card__content-container">
-        <div class="other-card__item">
-          <div class="other-card__img-box"><img src="img/IMG_2789.JPEG" alt=""></div>
-          <p class="other-card__description">Носки "Классика с косами"</p>
-          <p class="other-card__price">800 ₽</p>
-        </div>
-        <div class="other-card__item">
-          <div class="other-card__img-box"><img src="img/IMG_6859.JPG" alt=""></div>
-          <p class="other-card__description">Носки "Классика"</p>
-          <p class="other-card__price">700 ₽</p>
-        </div>
-        <div class="other-card__item">
-          <div class="other-card__img-box"><img src="img/IMG_2792.JPEG" alt=""></div>
-          <p class="other-card__description">Кардиган "Стиль"</p>
-          <p class="other-card__price">12 600 ₽</p>
-        </div>
-        <div class="other-card__item">
-          <div class="other-card__img-box"><img src="img/IMG_2792.JPEG" alt=""></div>
-          <p class="other-card__description">Шапочка-чепчик "Graceful"</p>
-          <p class="other-card__price">1 150 ₽</p>
-        </div>
-        <div class="other-card__item">
-          <div class="other-card__img-box"><img src="img/IMG_2792.JPEG" alt=""></div>
-          <p class="other-card__description">Шапка "Эльф"</p>
-          <p class="other-card__price">1 800 ₽</p>
+</div>
         </div>
       </div>
+      <div class="card__info info-card">
+        <p class="info-card__heading">Информация:</p>
+        <p class="info-card__content">
+          Шарф «Облачко» станет незаменимым аксессуаром к яркому образу. Легкий,
+          воздушный, не теряет цвет и не выцветает. Можно стирать в стиральной
+          машине. В наличии - алый. Шарф «Облачко» станет незаменимым
+          аксессуаром к яркому образу. Легкий, воздушный, не теряет цвет и не
+          выцветает. Можно стирать в стиральной машине. В наличии - алый.Шарф
+          «Облачко» станет незаменимым аксессуаром к яркому образу. Легкий,
+          воздушный, не теряет цвет и не выцветает. Можно стирать в стиральной
+          машине. В наличии - алый.Шарф «Облачко» станет незаменимым аксессуаром
+          к яркому образу. Легкий, воздушный, не теряет цвет и не выцветает.
+          Можно стирать в стиральной машине. В наличии - алый.Шарф «Облачко»
+          станет незаменимым аксессуаром к яркому образу. Легкий, воздушный, не
+          теряет цвет и не выцветает. Можно стирать в стиральной машине. В
+          наличии - алый.
+        </p>
+        <p class="info-card__show-more">Смотреть всю информацию</p>
+      </div>
+      <div class="card__other other-card swiper">
+        <p class="other-card__heading">Другие товары</p>
+        <div class="other-card__content-container other-card__swiper-wrapper swiper-wrapper">
+          <div class="other-card__item swiper-slide">
+            <div class="other-card__img-box">
+              <img src="img/IMG_2789.JPEG" alt="">
+            </div>
+            <p class="other-card__description">
+              Носки "Классика с косами"Носки "Классика с косами"Носки "Классика
+              с косами"Носки "Классика с косами"
+            </p>
+            <p class="other-card__price">800 ₽</p>
+          </div>
+          <div class="other-card__item swiper-slide">
+            <div class="other-card__img-box">
+              <img src="img/IMG_6859.JPG" alt="">
+            </div>
+            <p class="other-card__description">Носки "Классика"</p>
+            <p class="other-card__price">700 ₽</p>
+          </div>
+          <div class="other-card__item swiper-slide">
+            <div class="other-card__img-box">
+              <img src="img/IMG_2792.JPEG" alt="">
+            </div>
+            <p class="other-card__description">Кардиган "Стиль"</p>
+            <p class="other-card__price">12 600 ₽</p>
+          </div>
+          <div class="other-card__item swiper-slide">
+            <div class="other-card__img-box">
+              <img src="img/IMG_2792.JPEG" alt="">
+            </div>
+            <p class="other-card__description">Шапочка-чепчик "Graceful"</p>
+            <p class="other-card__price">1 150 ₽</p>
+          </div>
+          <div class="other-card__item swiper-slide">
+            <div class="other-card__img-box">
+              <img src="img/IMG_2792.JPEG" alt="">
+            </div>
+            <p class="other-card__description">Шапка "Эльф"</p>
+            <p class="other-card__price">1 800 ₽</p>
+          </div>
+        </div>
+        <div class="other-card__swiper-button-prev swiper-button-prev"></div>
+        <div class="other-card__swiper-button-next swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="detailed-info">
+  <div class="detailed-info__heading">
+    <h1>Информация о товаре</h1>
+    <div class="detailed-info__swiper swiper">
+      <div class="detailed-info__swiper-wrapper swiper-wrapper">
+        <div class="detailed-info__swiper-slide swiper-slide">
+          <p>Описание</p>
+        </div>
+        <div class="detailed-info__swiper-slide swiper-slide">
+          <p>Доставка</p>
+        </div>
+        <div class="detailed-info__swiper-slide swiper-slide">
+          <p>Отзывы</p>
+        </div>
+      </div>
+      <div class="detailed-info__swiper-pagination swiper-pagination"></div>
     </div>
   </div>
 </div>

@@ -70,22 +70,29 @@
 
   &__elements {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 100px 1fr 100px 0.25fr;
     gap: 15px;
     margin-bottom: 15px;
     flex-direction: row;
-    @media (max-width: 1024px) {
+    @media (max-width: $bp-1024) {
       margin-bottom: 40px;
       &:last-child {
         margin-bottom: 0;
       }
     }
+		@media (max-width: $bp-768) {
+      grid-template-columns: 100px 1fr 100px;
+    }
+		@media (max-width: $bp-425) {
+      grid-template-columns: 100px 1fr;
+    }
+
     > img {
-      width: 75px;
+			border-radius: 5px;
+			height: 100px;
       aspect-ratio: 1;
       grid-area: 1 / 1 / 2 / 2;
-      @media (max-width: 1024px) {
-        width: 100px;
+      @media (max-width: $bp-768) {
         grid-area: 1 / 1 / 3 / 2;
       }
     }
@@ -98,9 +105,13 @@
     box-sizing: border-box;
     margin-right: auto;
     grid-area: 1 / 2 / 2 / 3;
-
-    @media (max-width: $bp-1024) {
-      grid-area: 2 / 2 / 4 / 3;
+    @media (max-width: $bp-768) {
+      grid-area: 1 / 2 / 2 / 4;
+			
+    }
+		@media (max-width: $bp-425) {
+      grid-area: 1 / 2 / 2 / 3;
+			
     }
     a {
       width: fit-content;
@@ -110,13 +121,14 @@
       margin-bottom: 20px;
       color: #333;
       overflow: hidden;
+			line-height: 1.5rem;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       &:hover {
         color: gray;
       }
-      @media (max-width: 1024px) {
+      @media (max-width: $bp-768) {
         font-size: 1.05rem;
         margin-bottom: 10px;
       }
@@ -129,6 +141,7 @@
       width: fit-content;
       color: gray;
 			overflow: hidden;
+			margin-top: auto;
       @media (max-width: 1024px) {
         font-size: 0.9rem;
       }
@@ -137,48 +150,52 @@
 }
 
 .plus-minus {
-  min-width: 100px;
   flex: 0;
   grid-area: 1 / 3 / 2 / 4;
-  @media (max-width: 1024px) {
-    grid-area: 3 / 1 / 4 / 2;
+	max-width: 150px;
+	margin-left: auto;
+  @media (max-width: $bp-768) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+	@media (max-width: $bp-425) {
+    grid-area: 3 / 2 / 4 / 3;
   }
 }
 
 .price {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  width: 150px;
   align-items: flex-end;
   flex: 0;
   height: fit-content;
   white-space: nowrap;
   gap: 10px;
-  grid-area: 1 / 4 / 2 / 5;
-  @media (max-width: 1024px) {
-    grid-area: 1 / 2 / 2 / 3;
-    width: fit-content;
-    p {
-      &:nth-child(1) {
-        font-size: 1.2em;
-      }
+  grid-area: 1 / 4 / 2 / 4;
+	@media (max-width: $bp-768) {
+    grid-area: 2 / 2 / 3 / 3;
+		align-items: flex-start;
+  }
+	@media (max-width: $bp-425) {
+		align-items: flex-start;
+	}
+	&__basic {
+		display: flex;
+		flex-direction: row;
+		font-size: 30px;
+		font-weight: bold;
+		p:last-child {
+			font-size: 1.2rem;
+			margin-top: auto;
+			margin-left: 2px;
+		}
+		@media (max-width: $bp-768) {
+			p {
+				font-size: 20px;
+			}
 
-      &:nth-child(2) {
-        font-size: 1em;
-      }
-    }
-  }
-  p {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    &:nth-child(1) {
-      font-size: 28px;
-      font-weight: bold;
-      word-wrap: nowrap;
-    }
-  }
+		}
+	}
+	
 }
 
 .horizontal-line {
@@ -205,29 +222,10 @@
   flex-direction: column;
   flex: 1 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  @media (max-width: 1024px) {
+  @media (max-width: $bp-1024) {
     width: 100%;
   }
-
-  h3 {
-    &:nth-child(1) {
-      font-size: 1.5em;
-      text-align: left;
-    }
-
-    &:nth-child(2) {
-      font-size: 2em;
-      text-align: right;
-    }
-  }
-
-  p {
-    &:nth-child(5) {
-      font-size: 1em;
-      color: rgb(220, 43, 20);
-      text-align: right;
-    }
-  }
+  
   &__sign {
     height: 50px;
     border-radius: 10px;
@@ -249,10 +247,28 @@
     }
   }
 
-  .basket-price__price {
+  &__total {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+		>h3 {
+				font-size: 1.5rem;
+				text-align: left;
+		}
+		div {
+			height: 28px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			font-weight: bold;
+			h3 {
+				font-size: 2rem;
+			}
+			p {
+				font-size: 1.2rem;
+				margin-top: auto;
+				margin-left: 2px;
+			}
+		}
   }
 
   &__terms {

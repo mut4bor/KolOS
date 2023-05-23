@@ -1,4 +1,6 @@
 $bg-color: #f9f9f9;
+$bp-425: 425px;
+$bp-768: 768px;
 $bp-1024: 1024px;
 $header-height-def: 70px;
 $header-height-1200: 130px;
@@ -9,7 +11,7 @@ $header-link-color-active: #272727;
 $header-link-color: #7c7c7c;
 $discount-color: rgb(255, 0, 0, 0.7);
 $pink-button:  #D5AFAE;
-
+$cardDescrPadd: 30px;
 
 
 @import "nullStyle";
@@ -22,7 +24,6 @@ $pink-button:  #D5AFAE;
 @import "card";
 @import "counter";
 @import "header_cart";
-// @import "../../node_modules/swiper/swiper-bundle.css";
 
 * {
 	font-family: 'Montserrat', sans-serif;
