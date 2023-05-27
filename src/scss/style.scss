@@ -126,31 +126,28 @@ h1 {
       font-size: 1.5rem;
       transition: 0.3s;
     }
-    &:hover {
-      background: $bg-color;
-      &::after {
-        color: $header-link-color-active;
-      }
-    }
+		@media (min-width: $bp-1024) {
+			&:hover {
+				background: $bg-color;
+				&::after {
+					color: $header-link-color-active;
+				}
+			}
+		}
   }
-
-  &__swiper-button-prev:hover {
-    &::after {
-      transform: translateX(-5px);
-    }
-    // & ~ &__swiper-wrapper p {
-    //   transform: translateX(-5px);
-    // }
-  }
-
-  &__swiper-button-next:hover {
-    &::after {
-      transform: translateX(5px);
-    }
-    // & ~ &__swiper-wrapper p {
-    //   transform: translateX(5px);
-    // }
-  }
+	@media (min-width: $bp-1024) {
+		&__swiper-button-prev:hover {
+			&::after {
+				transform: translateX(-5px);
+			}
+		}
+	
+		&__swiper-button-next:hover {
+			&::after {
+				transform: translateX(5px);
+			}
+		}
+	}
 
   &__swiper-pagination {
     @media (max-width: 350px) {

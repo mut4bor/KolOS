@@ -8,32 +8,30 @@
         align-items: center;
         user-select: none;
         cursor: pointer;
+				font-size: 18px;
         &::before {
             content: "";
             display: inline-block;
-            width: 1.5em;
+            height: 25px;
             aspect-ratio: 1;
             flex-shrink: 0;
             flex-grow: 0;
             border: 1px solid #adb5bd;
-            border-radius: 0.25em;
-            margin-right: 5px;
+            border-radius: 50%;
+            margin: 0 8px 0 0;
             background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 75%;
+						background-position: center;
+            background-size: 60%;
             transition: 0.1s ease-in-out;
-            cursor: pointer;
         }
     }
     &:checked + label::before {
         border-color: $pink-button;
         background-color: $pink-button;
         background-image: url("img/icons/checkmark.svg");
-        cursor: pointer;
     }
 
     &:not(:disabled):not(:checked) + label:hover::before {
-        border-color: #b3d7ff;
-        cursor: pointer;
+        border-color: $pink-button;
     }
 }

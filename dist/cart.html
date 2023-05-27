@@ -37,36 +37,23 @@
 
       <div class="basket-content">
         <h1>Корзина</h1>
-        <!-- <div>
-          <input id="basket-content__main-checkbox" class="basket-content__main-checkbox checkbox" type="checkbox">
-          <label for="basket-content__main-checkbox">Выбрать все</label>
-        </div> -->
 
         <div class="basket-content__elements">
-
-          <!-- <input id="basket-content__fst-checkbox" class="checkbox" type="checkbox">
-          <label for="basket-content__fst-checkbox"></label> -->
           <img src="img/IMG_1744.JPEG" alt="">
-
-
           <div class="basket-content__text">
-            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima corporis porro
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima corporis porro
               culpa sit
               asperiores fugiat
               harum corrupti praesentium, reprehenderit unde consequuntur tempora animi minus a facilis id quis expedita
               mollitia!
-            </a>
+						</p>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-
-
           <div class="cart__plus-minus plus-minus">
     <div class="" data-action="minus">−</div>
     <div class="" data-counter>1</div>
     <div class="" data-action="plus">+</div>
 </div>
-
-
           <div class="price">
 
             <p class="price__basic">1267</p>
@@ -75,14 +62,11 @@
         </div>
 
         <div class="basket-content__elements">
-          <!-- <input id="basket-content__snd-checkbox" class="checkbox" type="checkbox">
-          <label for="basket-content__snd-checkbox"></label> -->
           <img src="img/IMG_1744.JPEG" alt="">
           <div class="basket-content__text">
-            <a href="">Lorem ipsum dolor sit amet.</a>
+            <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis debitis natus maiores. Nulla aperiam, qui fugiat saepe enim, doloremque ad voluptatem illo ea eum ut atque assumenda repudiandae magni.</p>
           </div>
-					<br>
           <div class="cart__plus-minus plus-minus">
     <div class="" data-action="minus">−</div>
     <div class="" data-counter>1</div>
@@ -110,7 +94,7 @@
           <input class="promo-code__input" type="text" placeholder="Промокод">
           <div class="promo-code__accept">Применить</div>
         </div>
-        <a href="" class="basket-price__sign">Перейти к оформлению</a>
+        <a href="" class="basket-price__sign">Перейти к оплате</a>
 
         <!-- <div class="basket-price__terms">
           <svg class="">
@@ -125,49 +109,82 @@
 
 
       </div>
+			<div class="basket-personal-info">
+        <h1>Ваши данные</h1>
+				<div>
+					<div class="basket-personal-info__name">
+						<label for="name">Имя</label>
+						<input id="name" type="text">
+					</div>
+					<div class="basket-personal-info__surname">
+						<label for="secondname">Фамилия</label>
+						<input id="secondname" type="text">
+					</div>
+	
+					<div class="basket-personal-info__mobile">
+						<label for="phone">Контактный телефон</label>
+						<input id="phone" type="tel">
+					</div>
+	
+					<div class="basket-personal-info__email">
+						<label for="email">Электронная почта</label>
+						<input id="email" type="email">
+					</div>
+				</div>
+      </div>
       <div class="basket-delivery">
         <h1>Способ получения</h1>
-        <button>+ Выбрать способ получения</button>
+        <div class="basket-delivery__checkboxes">
+					<div>
+						<input id="basket-delivery__shipping" class="basket-delivery__shipping checkbox" type="radio" value="shipping">
+						<label for="basket-delivery__shipping">Доставка</label>
+					</div>
+					<div>
+						<input id="basket-delivery__yourself" class="basket-delivery__yourself checkbox" type="radio" value="pickup">
+          	<label for="basket-delivery__yourself">Самовывоз</label>
+					</div>
+        </div>
+
+				<div class="basket-delivery__inputs">
+					<div class="basket-delivery__shipping-inputs">
+						<div class="basket-delivery__adress">
+							<label for="adress">Адрес доставки</label>
+							<input id="adress" type="text">
+						</div>
+						<div class="basket-delivery__flat">
+							<label for="flat">Квартира</label>
+							<input id="flat" type="number">
+						</div>
+						<div class="basket-delivery__floor">
+							<label for="floor">Этаж</label>
+							<input id="floor" type="number">
+						</div>
+						<div class="basket-delivery__entrance">
+							<label for="entrance">Подъезд</label>
+							<input id="entrance" type="number">
+						</div>
+						<div class="basket-delivery__date">
+							<label for="date">Дата доставки</label>
+							<input id="date" type="date">
+						</div>
+					</div>
+        </div>
       </div>
 
-      <div class="basket-payment">
-        <h1>Способ оплаты</h1>
-        <button>+ Выбрать способ оплаты</button>
+      <div class="basket-comment">
+				<div>
+					<label for="comment"><h1>Комментарий к заказу</h1></label>
+					<textarea name="comment" id="comment" rows="9"></textarea>
+				</div>
+				
       </div>
-
-      <div class="basket-personal-info">
-        <h1>Ваши данные</h1>
-
-        <div class="basket-personal-info__name">
-          <label for="name">Имя</label>
-          <input id="name" type="text">
-        </div>
-        <div class="basket-personal-info__surname">
-          <label for="secondname">Фамилия</label>
-          <input id="secondname" type="text">
-        </div>
-
-        <div class="basket-personal-info__mobile">
-          <label for="phone">Контактный телефон</label>
-          <input id="phone" type="tel">
-        </div>
-
-        <div class="basket-personal-info__email">
-          <label for="email">Электронная почта</label>
-          <input id="email" type="email">
-        </div>
-
-      </div>
-
-
-
-
+      
     </div>
     <!-- Подвал -->
 <footer class="footer">
 	<div class="footer__top">
 		<img src="img/icons/favicon.jpg" alt="">
-		<p>KolOS/экологичный гардероб детям и будущим мамам</p>
+		<p>KolOS — экологичный гардероб детям и будущим мамам</p>
 		<p>Товары для детей</p>
 	</div>
    <a href="https://t.me/mut4bor" target="_blank">Created: t.me/mut4bor</a>
