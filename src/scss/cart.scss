@@ -30,7 +30,7 @@
   button {
     background: transparent;
     font-size: 1.1em;
-    color: $pink-button;
+    color: $pink;
   }
   > div {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -219,7 +219,7 @@
     height: 50px;
     border-radius: 10px;
     display: flex;
-    background-color: $pink-button;
+    background-color: $pink;
     border: none;
     cursor: pointer;
     color: #fff;
@@ -271,7 +271,7 @@
       aspect-ratio: 1;
       align-self: flex-start;
       margin-right: 2px;
-      fill: $pink-button;
+      fill: $pink;
       @media (max-width: 1024px) {
         width: 16px;
       }
@@ -429,7 +429,7 @@
     transition: 0.1s ease-in-out;
 		font-size: 1.5rem;
     &:focus {
-      border-color: $pink-button;
+      border-color: $pink;
     }
   }
 }

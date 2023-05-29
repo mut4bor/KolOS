@@ -1,10 +1,5 @@
 @import "generalStyle";
 
-h1 {
-  font-size: 2.5rem;
-  margin: 0 0 40px;
-}
-
 .container {
   width: $container-w;
   min-height: 100%;
@@ -26,12 +21,6 @@ h1 {
   margin: 0 0 80px;
   @media (max-width: $bp-1024) {
     width: 100%;
-  }
-  h1 {
-    color: #000;
-    @media (max-width: $bp-1024) {
-      font-size: 2rem;
-    }
   }
 }
 
@@ -126,28 +115,28 @@ h1 {
       font-size: 1.5rem;
       transition: 0.3s;
     }
-		@media (min-width: $bp-1024) {
-			&:hover {
-				background: $bg-color;
-				&::after {
-					color: $header-link-color-active;
-				}
-			}
-		}
+    @media (min-width: $bp-1024) {
+      &:hover {
+        background: $bg-color;
+        &::after {
+          color: $header-link-color-active;
+        }
+      }
+    }
   }
-	@media (min-width: $bp-1024) {
-		&__swiper-button-prev:hover {
-			&::after {
-				transform: translateX(-5px);
-			}
-		}
-	
-		&__swiper-button-next:hover {
-			&::after {
-				transform: translateX(5px);
-			}
-		}
-	}
+  @media (min-width: $bp-1024) {
+    &__swiper-button-prev:hover {
+      &::after {
+        transform: translateX(-5px);
+      }
+    }
+
+    &__swiper-button-next:hover {
+      &::after {
+        transform: translateX(5px);
+      }
+    }
+  }
 
   &__swiper-pagination {
     @media (max-width: 350px) {
@@ -160,15 +149,60 @@ h1 {
 }
 
 .services-block {
-  &__main {
-    display: grid;
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    @media (max-width: $bp-1024) {
+      gap: 0 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      padding: 10px;
+      user-select: none;
+      display: flex;
+      flex: 1;
+      border-radius: 5px 5px 5px 5px;
+      text-align: center;
+      min-width: 350px;
+      white-space: nowrap;
+      justify-content: center;
+      margin-bottom: 30px;
+      height: 55px;
+      background-color: #00000015;
+      cursor: pointer;
+      transition: 0.3s;
+      &.active {
+        background-color: $pink;
+        color: $bg-color;
+      }
+      @media (max-width: $bp-1024) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: $bp-768) {
+        width: 100%;
+        align-self: baseline;
+        min-width: 280px;
+      }
+    }
+  }
+  &__stock,
+  &__order {
+    display: none;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin: 0 0 50px;
     overflow: hidden;
+    &.active {
+      display: grid;
+    }
     @media (max-width: $bp-1024) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px 20px;
+      gap: 20px;
     }
   }
   &__item {
@@ -231,7 +265,7 @@ h1 {
   }
   &__name {
     margin: auto 0;
-		padding-bottom: 6px;
+    padding-bottom: 6px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -255,7 +289,7 @@ h1 {
     color: $header-link-color-active;
   }
   &__show-more-button {
-    background: $pink-button;
+    background: $pink;
     color: $bg-color;
     border-radius: 10px;
     width: 180px;
@@ -277,40 +311,58 @@ h1 {
 }
 
 .description-block {
-  width: 40%;
+  width: 800px;
   @media (max-width: $bp-1024) {
     width: 100%;
   }
   &__item {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    // align-items: center;
     display: flex;
     flex-direction: column;
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 2.5rem;
+      @media (max-width: $bp-1024) {
+        text-align: start;
+        font-size: 2rem;
+      }
+    }
 
     p {
       margin-bottom: 35px;
       font-size: 1.35rem;
       color: $header-link-color;
+      text-align: center;
+
+      &:last-child,
+      &:nth-last-child(2) {
+        align-self: center;
+        @media (max-width: $bp-320) {
+          align-self: flex-start;
+        }
+      }
       @media (max-width: $bp-1024) {
         text-align: start;
         font-size: 1.1rem;
         margin-bottom: 15px;
         line-height: 1.5rem;
       }
-      &:nth-child(2) {
-        margin-bottom: 8px;
-      }
     }
   }
 }
 
 .review-block {
-  @media (max-width: $bp-1024) {
-    h1 {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: start;
+    @media (max-width: $bp-1024) {
       text-align: center;
+      font-size: 2rem;
     }
   }
+
   &__swiper {
     height: 300px;
     width: 100%;
@@ -321,64 +373,49 @@ h1 {
     align-items: center;
     justify-content: center;
     display: flex;
-		width: fit-content;
+    width: fit-content;
     img {
       border-radius: 20px;
       width: 100%;
       height: 100%;
-			object-fit: cover;
+      object-fit: cover;
     }
   }
 
   &__swiper-button-prev,
   &__swiper-button-next {
-		box-shadow: 0px 0px 30px 5px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 30px 5px rgba(34, 60, 80, 0.2);
     border-radius: 50%;
     width: 44px;
     background: #fff;
-		transition: .3s;
+    transition: 0.3s;
     &::after {
       color: #acacac;
       aspect-ratio: 1;
       font-size: 1.2rem;
       transition: 0.3s;
-			font-weight: bold;
+      font-weight: bold;
     }
     &:hover {
-			transform: scale(1.1);
+      transform: scale(1.1);
 
       &::after {
         color: $header-link-color-active;
       }
     }
   }
-
-  // &__swiper-button-prev {
-	// 	left: -20px;
-  //   &:hover {
-  //     &::after {
-  //       transform: translateX(-5px);
-  //     }
-  //     & ~ &__swiper-wrapper p {
-  //       transform: translateX(-5px);
-  //     }
-  //   }
-  // }
-
-  // &__swiper-button-next {
-	// 	right: -20px;
-  //   &:hover {
-  //     &::after {
-  //       transform: translateX(5px);
-  //     }
-  //     & ~ &__swiper-wrapper p {
-  //       transform: translateX(5px);
-  //     }
-  //   }
-  // }
 }
 
 .contacts-block {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: start;
+    @media (max-width: $bp-1024) {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
   &__item {
     display: flex;
     flex-direction: row;
@@ -390,9 +427,10 @@ h1 {
   &__map {
     border-radius: 10px;
     overflow: hidden;
+    width: 700px;
     box-shadow: 0px 0px 20px 2px rgba(34, 60, 80, 0.2);
     @media (max-width: $bp-1024) {
-      flex-direction: column;
+      width: 100%;
     }
   }
   &__social {

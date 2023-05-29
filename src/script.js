@@ -34,11 +34,6 @@ const ReviewBlockSwiper = new Swiper(".review-block__swiper", {
     nextEl: ".review-block__swiper-button-next",
     prevEl: ".review-block__swiper-button-prev",
   },
-  // pagination: {
-  // 	el: '.review-block__swiper-pagination',
-  // 	clickable: true,
-  // 	type: 'bullets',
-  // },
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -107,6 +102,47 @@ const OtherCardImageSwiper = new Swiper(".card__image", {
   simulateTouch: true,
   direction: "horizontal",
   watchOverflow: true,
+});
+
+const servicesContentWrapperItem = document.querySelectorAll(
+  ".services-block__content-wrapper >div"
+);
+
+const servicesHeading = document.querySelectorAll(
+  ".services-block__heading h1"
+);
+
+servicesHeading.forEach(function (element, i) {
+  element.setAttribute("data-headingList", i + 1);
+  document.querySelector('[data-headingList="1"]').classList.add("active");
+});
+
+servicesContentWrapperItem.forEach(function (element, i) {
+  element.setAttribute("data-contentList", i + 1);
+  document.querySelector('[data-contentList="1"]').classList.add("active");
+});
+
+servicesHeading.forEach(function (element) {
+  element.addEventListener("click", function () {
+		servicesHeading.forEach(function (e) {
+      e.classList.remove("active");
+    });
+		element.classList.add('active')
+
+		let dataHeadingListNumber = element.getAttribute("data-headingList");
+
+		servicesContentWrapperItem.forEach(function (e) {
+      e.classList.remove("active");
+    });
+
+    
+
+    let dataContentList = document.querySelector(
+      '[data-contentList="' + dataHeadingListNumber + '"]'
+    );
+
+    dataContentList.classList.add("active");
+  });
 });
 
 const InfoCardShowMore = document.querySelector(".info-card__show-more");

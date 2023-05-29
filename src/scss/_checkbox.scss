@@ -26,12 +26,12 @@
         }
     }
     &:checked + label::before {
-        border-color: $pink-button;
-        background-color: $pink-button;
+        border-color: $pink;
+        background-color: $pink;
         background-image: url("img/icons/checkmark.svg");
     }
 
     &:not(:disabled):not(:checked) + label:hover::before {
-        border-color: $pink-button;
+        border-color: $pink;
     }
 }

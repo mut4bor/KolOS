@@ -3,6 +3,7 @@ let basketDeliveryShippingInputsDivs = document.querySelectorAll(
   ".basket-delivery__shipping-inputs div"
 );
 let basketDeliveryAdressLabel = document.querySelector('.basket-delivery__adress label');
+let basketDeliveryDateTextArea = document.querySelector('.basket-delivery__date textarea');
 let basketDeliveryDateLabel = document.querySelector('.basket-delivery__date label');
 let basketDeliveryAdressInput = document.querySelector('#adress')
 let checkboxShipping = document.querySelector(".basket-delivery__shipping");
@@ -14,13 +15,15 @@ function basketAdressProp() {
     if (checkboxShipping.checked == true) {
       element.classList.remove("active");
 			basketDeliveryAdressLabel.innerText = 'Адрес доставки';
-			basketDeliveryDateLabel.innerText = 'Дата доставки';
+			basketDeliveryDateLabel.innerText = 'Дата доставки*';
+			basketDeliveryDateTextArea.value = 'После оплаты с вами свяжутся и уточнят ближайную дату доставки';
 			basketDeliveryAdressInput.removeAttribute('disabled', 'disabled');
 			basketDeliveryAdressInput.value = ''
     } else {
 			element.classList.add("active");
 			basketDeliveryAdressLabel.innerText = 'Адрес самовывоза';
-			basketDeliveryDateLabel.innerText = 'Дата самовывоза';
+			basketDeliveryDateLabel.innerText = 'Дата самовывоза*';
+			basketDeliveryDateTextArea.value = 'После оплаты с вами свяжутся и уточнят ближайшую дату самовывоза';
 			basketDeliveryAdressInput.setAttribute('disabled', 'disabled');
 			basketDeliveryAdressInput.value = 'Витебский проспект дом 47 корпус 4'
     }
