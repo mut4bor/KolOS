@@ -12,6 +12,7 @@
   <body>
     @@include('parts/icons.html') @@include('parts/backdrops.html')
     @@include('parts/header.html')
+    <!-- ! ПОМЕНЯТЬ КЛИП ПО БЕКДРОПУ С КЛАССА НА ДАТА АТРИБУТЫ -->
     <div class="container">
       <div class="start-block main-block section">
         <div class="start-block__image">
@@ -55,201 +56,211 @@
       </div>
 
       <div class="services-block main-block section">
-        <div class="services-block__heading">
-					<h1>В наличии</h1>
-					<h1>На заказ</h1>
+        <div class="services-block__heading swiper">
+          <div class="services-block__heading-swiper-wrapper swiper-wrapper">
+            <h1 class="swiper-slide">В наличии</h1>
+            <h1 class="swiper-slide">На заказ</h1>
+          </div>
+          <div
+            class="services-block__heading-swiper-button-prev swiper-button-prev"
+          ></div>
+          <div
+            class="services-block__heading-swiper-button-next swiper-button-next"
+          ></div>
         </div>
-				<div class="services-block__content-wrapper">
-					<div class="services-block__stock services-block__main main-block__item">
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_3257.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Шарф «Облачко»</div>
-							<div class="services-block__price">
-								<div class="services-block__discount active">1 500 ₽</div>
-								<div class="services-block__real-price">750 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_6859.JPG" alt="" />
-							</div>
-							<div class="services-block__name">Варежки из пуха норки</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">2 500 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_6859.JPG" alt="" />
-							</div>
-							<div class="services-block__name">
-								Капор с удлиненной манишкой Капор с удлиненной манишкой
-							</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">6 500 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_1747.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Шапка "Эльф"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">1 800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-					</div>
-					<div class="services-block__order services-block__main main-block__item">
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_6859.JPG" alt="" />
-							</div>
-							<div class="services-block__name">
-								Капор с удлиненной манишкой Капор с удлиненной манишкой
-							</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">6 500 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_3257.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Шарф «Облачко»</div>
-							<div class="services-block__price">
-								<div class="services-block__discount active">1 500 ₽</div>
-								<div class="services-block__real-price">750 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_6859.JPG" alt="" />
-							</div>
-							<div class="services-block__name">Варежки из пуха норки</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">2 500 ₽</div>
-							</div>
-						</div>
-						
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_1747.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Шапка "Эльф"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">1 800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-						<div class="services-block__item">
-							<div class="services-block__image">
-								<img class="" src="img/IMG_2155.JPEG" alt="" />
-							</div>
-							<div class="services-block__name">Носки "Классика с косами"</div>
-							<div class="services-block__price">
-								<div class="services-block__discount"></div>
-								<div class="services-block__real-price">800 ₽</div>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="services-block__content-wrapper swiper">
+          <div
+            class="services-block__content-wrapper-swiper-wrapper swiper-wrapper"
+          >
+            <div
+              class="services-block__stock services-block__main main-block__item swiper-slide"
+            >
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_3257.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">Шарф «Облачко»</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">750 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_6859.JPG" alt="" />
+                </div>
+                <div class="services-block__name">Варежки из пуха норки</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">2 500 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_6859.JPG" alt="" />
+                </div>
+                <div class="services-block__name">
+                  Капор с удлиненной манишкой Капор с удлиненной манишкой
+                </div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">6 500 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_1747.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">Шапка "Эльф"</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">1 800 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_2155.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">
+                  Носки "Классика с косами"
+                </div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">800 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_2155.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">
+                  Носки "Классика с косами"
+                </div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">800 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_2155.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">
+                  Носки "Классика с косами"
+                </div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">800 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_2155.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">
+                  Носки "Классика с косами"
+                </div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">800 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_2155.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">
+                  Носки "Классика с косами"
+                </div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">800 руб</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="services-block__order services-block__main main-block__item swiper-slide"
+            >
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_2155.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">
+                  Носки "Классика с косами"
+                </div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">800 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_6859.JPG" alt="" />
+                </div>
+                <div class="services-block__name">
+                  Капор с удлиненной манишкой Капор с удлиненной манишкой
+                </div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">6 500 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_3257.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">Шарф «Облачко»</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">750 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_6859.JPG" alt="" />
+                </div>
+                <div class="services-block__name">Варежки из пуха норки</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">2 500 руб</p>
+                </div>
+              </div>
+
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_1747.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">Шапка "Эльф"</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">1 800 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_3257.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">Шарф «Облачко»</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">750 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_3257.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">Шарф «Облачко»</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">750 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_3257.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">Шарф «Облачко»</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">750 руб</p>
+                </div>
+              </div>
+              <div class="services-block__item">
+                <div class="services-block__image">
+                  <img class="" src="img/IMG_3257.JPEG" alt="" />
+                </div>
+                <div class="services-block__name">Шарф «Облачко»</div>
+                <div class="services-block__price">
+                  <p class="services-block__real-price">750 руб</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <p class="services-block__show-more-button show-more-button">
           Показать больше
         </p>
@@ -289,6 +300,62 @@
         </div>
       </div>
 
+      <div class="masterclass-block main-block">
+        <div class="masterclass-block__heading main-block__item">
+          <h1>Мастерклассы</h1>
+        </div>
+        <div
+          class="masterclass-block__container masterclass-block__swiper swiper"
+        >
+          <div
+            class="masterclass-block__swiper-wrapper main-block__item swiper-wrapper"
+          >
+            <div class="masterclass-block__swiper-slide swiper-slide">
+              <a href="" target="_blank">
+                <img class="" src="img/review/2wmNnarEdeg.jpg" alt="" />
+              </a>
+              <div class="masterclass-block__description">
+                <p>Мастеркласс №1</p>
+                <p>1800 руб</p>
+              </div>
+            </div>
+            <div class="masterclass-block__swiper-slide swiper-slide">
+              <a href="" target="_blank">
+                <img class="" src="img/review/FZLlYWfNFIo.jpg" alt="" />
+              </a>
+              <div class="masterclass-block__description">
+                <p>Мастеркласс №2</p>
+                <p>1800 руб</p>
+              </div>
+            </div>
+            <div class="masterclass-block__swiper-slide swiper-slide">
+              <a href="" target="_blank">
+                <img class="" src="img/review/MAQ1nkbg7co.jpg" alt="" />
+              </a>
+              <div class="masterclass-block__description">
+                <p>Мастеркласс №3</p>
+                <p>1800 руб</p>
+              </div>
+            </div>
+            <div class="masterclass-block__swiper-slide swiper-slide">
+              <a href="" target="_blank">
+                <img class="" src="img/review/vP3KJbIYn5k.jpg" alt="" />
+              </a>
+              <div class="masterclass-block__description">
+                <p>Мастеркласс №4</p>
+                <p>1800 руб</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="masterclass-block__swiper-button-prev swiper-button-prev"
+          ></div>
+          <div
+            class="masterclass-block__swiper-button-next swiper-button-next"
+          ></div>
+        </div>
+      </div>
+
       <div class="review-block main-block">
         <div class="review-block__heading main-block__item">
           <h1>Отзывы</h1>
@@ -297,25 +364,39 @@
           <div
             class="review-block__swiper-wrapper main-block__item swiper-wrapper"
           >
-            <div
-              class="review-block__img review-block__swiper-slide swiper-slide"
-            >
-              <img class="" src="img/review/2wmNnarEdeg.jpg" alt="" />
+            <div class="review-block__swiper-slide swiper-slide">
+              <div class="review-block__description">
+                <h3>Оленька Колобова</h3>
+                <p>
+                  Олечка, с удовольствием носим носочки и шапочку. В шапочке
+                  отстегивается пумпон, что удобно при стирке. А носочки очень
+                  удобные, прекрасно сидят и греют. Спасибо большое В ожидании
+                  следующего заказа! Уже готовимся к холодам и ждём балаклаву.
+                </p>
+              </div>
             </div>
-            <div
-              class="review-block__img review-block__swiper-slide swiper-slide"
-            >
-              <img class="" src="img/review/FZLlYWfNFIo.jpg" alt="" />
+            <div class="review-block__swiper-slide swiper-slide">
+              <div class="review-block__description">
+                <h3>Ноунейм)</h3>
+                <p>
+                  Добрый день. Мы забрали шарф. Спасибо Такой уютыш Настоящее
+                  облако
+                </p>
+              </div>
             </div>
-            <div
-              class="review-block__img review-block__swiper-slide swiper-slide"
-            >
-              <img class="" src="img/review/MAQ1nkbg7co.jpg" alt="" />
+            <div class="review-block__swiper-slide swiper-slide">
+              <div class="review-block__description">
+                <h3>Дарья Колобова</h3>
+                <p>
+                  Добрый день. Мы забрали шарф. Спасибо Такой уютыщ Настоящее
+                  облако
+                </p>
+              </div>
             </div>
-            <div
-              class="review-block__img review-block__swiper-slide swiper-slide"
-            >
-              <img class="" src="img/review/vP3KJbIYn5k.jpg" alt="" />
+            <div class="review-block__swiper-slide swiper-slide">
+              <div class="review-block__description">
+                <p>Отзыв №4</p>
+              </div>
             </div>
           </div>
           <div

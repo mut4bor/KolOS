@@ -152,59 +152,89 @@
   &__heading {
     display: flex;
     flex-direction: row;
-    // align-items: center;
-    flex-wrap: wrap;
-    gap: 0 30px;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
     @media (max-width: $bp-1024) {
-      gap: 0 20px;
+      gap: 20px;
+      margin-bottom: 20px;
     }
+    &-swiper-button-prev,
+    &-swiper-button-next {
+      border-radius: 50%;
+      width: 44px;
+      &::after {
+        color: $bg-color;
+        aspect-ratio: 1;
+        font-size: 1.5rem;
+        transition: 0.3s;
+      }
+      // @media (min-width: $bp-1024) {
+      // 	&:hover {
+      // 		background: $bg-color;
+      // 		&::after {
+      // 			color: $header-link-color-active;
+      // 		}
+      // 	}
+      // }
+    }
+    // @media (min-width: $bp-1024) {
+    // 	&-swiper-button-prev:hover {
+    // 		&::after {
+    // 			transform: translateX(-5px);
+    // 		}
+    // 	}
+
+    // 	&-swiper-button-next:hover {
+    // 		&::after {
+    // 			transform: translateX(5px);
+    // 		}
+    // 	}
+    // }
 
     h1 {
       font-size: 2.5rem;
       padding: 10px;
-      user-select: none;
-      display: flex;
-      flex: 1;
-      border-radius: 5px 5px 5px 5px;
       text-align: center;
-      min-width: 350px;
-      white-space: nowrap;
-      justify-content: center;
-      margin-bottom: 30px;
-      height: 55px;
-      background-color: #00000015;
-      cursor: pointer;
       transition: 0.3s;
-      &.active {
-        background-color: $pink;
-        color: $bg-color;
-      }
+      background-color: $pink;
+      color: $bg-color;
+			user-select: none;
+      // &.active {
+      //   background-color: $pink;
+      //   color: $bg-color;
+      // }
+
       @media (max-width: $bp-1024) {
         font-size: 2rem;
       }
 
       @media (max-width: $bp-768) {
-        width: 100%;
+        // width: 100%;
         align-self: baseline;
-        min-width: 280px;
+        // min-width: 280px;
       }
     }
   }
   &__stock,
   &__order {
-    display: none;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin: 0 0 50px;
     overflow: hidden;
-    &.active {
-      display: grid;
-    }
+    width: 100%;
     @media (max-width: $bp-1024) {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
   }
+
+  &__content-wrapper {
+    width: 100%;
+  }
+
   &__item {
     font-size: 1.15rem;
     color: $header-link-color;
@@ -216,6 +246,7 @@
     flex-shrink: 1;
     flex-grow: 0;
     min-width: 1px;
+    padding-bottom: 5px;
     &:nth-child(n + 6) {
       display: none;
       &.active {
@@ -266,24 +297,12 @@
   &__name {
     margin: auto 0;
     padding-bottom: 6px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    box-sizing: border-box;
+    @include Ellipsis;
   }
   &__price {
     display: flex;
     flex-direction: row;
     column-gap: 10px;
-  }
-  &__discount {
-    color: $discount-color;
-    text-decoration: line-through;
-    display: none;
-    &.active {
-      display: block;
-    }
   }
   &__real-price {
     color: $header-link-color-active;
@@ -316,7 +335,6 @@
     width: 100%;
   }
   &__item {
-    // align-items: center;
     display: flex;
     flex-direction: column;
     h1 {
@@ -352,7 +370,7 @@
   }
 }
 
-.review-block {
+.masterclass-block {
   h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
@@ -369,40 +387,147 @@
   }
   &__swiper-slide {
     overflow: hidden;
-    border-radius: 20px;
     align-items: center;
     justify-content: center;
     display: flex;
     width: fit-content;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 5px;
+    a {
+      width: 100%;
+      height: 250px;
+    }
     img {
       border-radius: 20px;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+    > div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-size: 1.2rem;
+      gap: 5px;
+      p {
+        @include Ellipsis;
+        &:first-child {
+          color: $header-link-color;
+        }
+        &:last-child {
+          color: $header-link-color-active;
+        }
+      }
+    }
   }
 
   &__swiper-button-prev,
   &__swiper-button-next {
-    box-shadow: 0px 0px 30px 5px rgba(34, 60, 80, 0.2);
-    border-radius: 50%;
+    height: 100%;
     width: 44px;
-    background: #fff;
-    transition: 0.3s;
+    top: 0;
     &::after {
       color: #acacac;
       aspect-ratio: 1;
       font-size: 1.2rem;
       transition: 0.3s;
       font-weight: bold;
+      box-shadow: 0px 0px 30px 5px rgba(34, 60, 80, 0.2);
+      border-radius: 50%;
+      min-width: 44px;
+      background: #fff;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    &:hover {
-      transform: scale(1.1);
 
-      &::after {
-        color: $header-link-color-active;
+    @media (min-width: $bp-1024) {
+      &:hover {
+        &::after {
+          color: $header-link-color-active;
+          transform: scale(1.1);
+        }
       }
     }
+  }
+}
+
+.review-block {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: start;
+    @media (max-width: $bp-1024) {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  &__swiper {
+    width: 100%;
+    align-items: stretch;
+  }
+  &__swiper-slide {
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    width: fit-content;
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 5px;
+    background: #fff;
+    padding: 20px 30px;
+    line-height: 1.5rem;
+    border-radius: 10px;
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $header-link-color;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__description {
+    height: 100%;
+  }
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    transition: 0.3s;
+    background: #fff;
+    box-shadow: 0px 0px 20px 5px rgba(34, 60, 80, 0.2);
+    border-radius: 50%;
+    &::after {
+      color: #acacac;
+      transition: 0.3s;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: $bp-1024) {
+      &:hover {
+        transform: scale(1.1);
+        &::after {
+          color: $header-link-color-active;
+        }
+      }
+    }
+  }
+
+  &__swiper-button-prev {
+    left: 20px;
+  }
+
+  &__swiper-button-next {
+    right: 20px;
   }
 }
 
@@ -419,7 +544,7 @@
   &__item {
     display: flex;
     flex-direction: row;
-    column-gap: 50px;
+    justify-content: space-between;
     @media (max-width: $bp-1024) {
       flex-direction: column;
     }

@@ -9,6 +9,7 @@
     transition: opacity 0.3s ease;
     transition-delay: 0.05s;
 		z-index: 3;
+		cursor: pointer;
     &.active {
         opacity: 1;
         pointer-events: all;

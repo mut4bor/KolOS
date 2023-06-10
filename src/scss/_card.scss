@@ -1,3 +1,11 @@
+@mixin Ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
 .card {
   position: fixed;
   width: 950px;
@@ -6,16 +14,16 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 4;
-  border-radius: 15px;
   overflow: hidden;
   display: none;
+	border-radius: 15px;
   @media (max-width: $bp-1024) {
     width: 100%;
     height: 100vh;
-    border-radius: 0;
     left: 0;
     top: 0;
     transform: translate(0%, 0%);
+		border-radius: 0;
   }
   &.active {
     display: block;
@@ -29,12 +37,12 @@
     overflow: auto;
     @media (max-width: $bp-1024) {
       flex-direction: column;
+			width: 100%;
     }
   }
 
   &__image {
     min-width: 60%;
-    height: 100%;
     background: $bg-color;
     max-width: 100%;
     * {
@@ -59,7 +67,6 @@
     display: flex;
     img {
       width: 100%;
-      // max-height: 100%;
       object-fit: contain;
     }
   }
@@ -129,23 +136,91 @@
   }
 
   &__description {
-    height: 100%;
-    padding: $cardDescrPadding 0 $cardDescrPadding $cardDescrPadding;
-		display: flex;
-		flex-direction: column;
+    padding: $cardDescriptionPadding 0 $cardDescriptionPadding
+      $cardDescriptionPadding;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
-		width: 40%;
-		>div {
-			margin-right: $cardDescrPadding;
-			&:last-child {
-				margin-right: auto;
-				margin-left: 0;
-			}
-		}
-		@media (max-width: $bp-1024) {
+    width: 40%;
+    > div {
+      margin-right: $cardDescriptionPadding;
+      &:last-child {
+        margin-right: auto;
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: $bp-1024) {
       width: 100%;
     }
   }
+}
+.back-arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	z-index: 9999999;
+  svg {
+    width: 50%;
+    aspect-ratio: 1;
+    display: none;
+    padding: 0;
+    use {
+      width: 100%;
+      fill: rgba(0, 0, 0, 0.75);
+    }
+    @media (max-width: $bp-1024) {
+      display: block;
+    }
+  }
+}
+.xmark {
+	position: fixed;
+	width: 30px;
+	aspect-ratio: 1;
+	z-index: 99999;
+	overflow: visible;
+	background: transparent;
+	display: none;
+	background: rgba(48, 48, 48, 0.35);
+	border-radius: 50%;
+	opacity: 0.5;
+	align-items: center;
+	justify-content: center;
+	transition: .1s;
+	&.active {
+		@media (min-width: $bp-1024) {
+			display: flex;
+		}
+	}
+
+	&:hover {
+		opacity: 1;
+		background: rgba(29, 29, 29, 0.35);
+	}
+
+	&.hover {
+		opacity: 1;
+		background: rgba(29, 29, 29, 0.35);
+	}
+	svg {
+    width: 10px;
+    aspect-ratio: 1;
+    padding: 0;
+    use {
+      width: 100%;
+      fill: #fff;
+			stroke: #fff;
+			stroke-width: 2px;
+    }
+	}
+	
 }
 .header-card {
   &__heading {
@@ -172,7 +247,7 @@
 }
 .info-card {
   display: flex;
-	flex-direction: column;
+  flex-direction: column;
   &__heading {
     font-weight: bold;
     margin: 0 0 5px;
@@ -181,20 +256,22 @@
     line-height: 1.4rem;
     font-size: 0.9rem;
     margin: 0 0 8px;
-		overflow: hidden;
+    overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
-    @media (max-width: $bp-1024) {
-      &.active {
-				display: flex;
-      }
+    &.active {
+      display: flex;
+      margin: 0;
     }
   }
   &__show-more {
     color: $pink;
     cursor: pointer;
     margin-top: auto;
+    &.active {
+      display: none;
+    }
     @media (max-width: $bp-1024) {
       &.active {
         display: none;
@@ -203,7 +280,7 @@
   }
 }
 .other-card {
-	max-width: 100%;
+  max-width: 100%;
   &__swiper-wrapper {
     height: fit-content;
   }
@@ -225,6 +302,7 @@
     height: 30px;
     background: transparent;
     transition: 0.3s;
+    display: none;
     &::after {
       color: transparent;
       aspect-ratio: 1;
@@ -238,6 +316,9 @@
       &::after {
         color: $header-link-color-active;
       }
+    }
+    @media (min-width: $bp-1024) {
+      display: flex;
     }
   }
 
@@ -266,13 +347,7 @@
   &__description {
     font-size: 0.9rem;
     line-height: 20px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    box-sizing: border-box;
-    p {
-    }
+    @include Ellipsis;
   }
   &__price {
     font-weight: bold;
@@ -280,37 +355,20 @@
 }
 .detailed-info {
   position: fixed;
-  width: 950px;
-  height: 650px;
+  width: 650px;
+  height: fit-content;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
   border-radius: 15px;
   display: none;
-
+  background: #fff;
+  padding: $cardDescriptionPadding;
   &.active {
     display: block;
     @media (max-width: $bp-1024) {
       display: none;
     }
   }
-  &__heading {
-  }
-  &__swiper {
-  }
-  &__swiper-wrapper {
-  }
-  &__swiper-slide {
-  }
-  &__swiper-pagination {
-  }
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-pagination {
 }

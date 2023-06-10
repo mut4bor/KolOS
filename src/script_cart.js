@@ -25,7 +25,7 @@ function basketAdressProp() {
 			basketDeliveryDateLabel.innerText = 'Дата самовывоза*';
 			basketDeliveryDateTextArea.value = 'После оплаты с вами свяжутся и уточнят ближайшую дату самовывоза';
 			basketDeliveryAdressInput.setAttribute('disabled', 'disabled');
-			basketDeliveryAdressInput.value = 'Витебский проспект дом 47 корпус 4'
+			basketDeliveryAdressInput.value = 'Витебский проспект дом 47 корпус 2'
     }
   });
 }

@@ -1,18 +1,22 @@
-$bg-color: #f9f9f9;
 $bp-320: 320px;
 $bp-425: 425px;
 $bp-768: 768px;
 $bp-1024: 1024px;
+
 $header-height-def: 70px;
 $header-height-1200: 130px;
 $header-height-1024: 50px;
+
 $container-w: 100%;
-$main-block-w: 1024px;
+$scrollBarWidth: 7px;
+$main-block-w: calc(1024px - $scrollBarWidth);
+
+$bg-color: #f9f9f9;
 $header-link-color-active: #272727;
 $header-link-color: #7c7c7c;
 $discount-color: rgb(255, 0, 0, 0.7);
 $pink: #d5afae;
-$cardDescrPadding: 30px;
+$cardDescriptionPadding: 30px;
 
 @import "nullStyle";
 @import "fonts";
@@ -68,8 +72,8 @@ $cardDescrPadding: 30px;
       }
     }
     textarea {
-      resize: none;
-      height: fit-content;
+			resize: none;
+      min-height: 85px;
       line-height: 20px;
       padding: 10px 10px 12px;
       font-size: 1.1rem;

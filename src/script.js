@@ -16,23 +16,76 @@ const StartBlockSwiper = new Swiper(".start-block__swiper", {
     delay: 5000,
     disableOnInteraction: false,
   },
+	breakpoints: {
+		320: {
+			simulateTouch: true,
+		},
+		1024: {
+			simulateTouch: false,
+		}
+	},
   speed: 500,
-  simulateTouch: false,
+  
   direction: "horizontal",
   loop: true,
   loopedSlides: 1,
   slidesPerView: 1,
-  watchOverflow: true,
+  // watchOverflow: true,
   spaceBetween: 30,
   slidesPerGroup: 1,
   centeredSlides: true,
   initialSlide: 0,
 });
 
-const ReviewBlockSwiper = new Swiper(".review-block__swiper", {
+const ServicesHeadingSwiper = new Swiper(".services-block__heading", {
   navigation: {
-    nextEl: ".review-block__swiper-button-next",
-    prevEl: ".review-block__swiper-button-prev",
+    nextEl: ".services-block__heading-swiper-button-next",
+    prevEl: ".services-block__heading-swiper-button-prev",
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+	breakpoints: {
+		320: {
+			simulateTouch: true,
+		},
+		1024: {
+			simulateTouch: false,
+		}
+	},
+	loop: 'true',
+  slidesPerView: 1,
+  speed: 200,
+  simulateTouch: true,
+  direction: "horizontal",
+  watchOverflow: true,
+});
+
+const ServicesSwiper = new Swiper(".services-block__content-wrapper", {
+	// breakpoints: {
+	// 	320: {
+	// 		simulateTouch: true,
+	// 	},
+	// 	1024: {
+	// 		simulateTouch: false,
+	// 	}
+	// },
+	simulateTouch: false,
+	loop: 'true',
+  slidesPerView: 1,
+  speed: 200,
+  simulateTouch: true,
+  direction: "horizontal",
+  watchOverflow: true,
+});
+
+ServicesHeadingSwiper.controller.control = ServicesSwiper;
+
+const masterclassBlockSwiper = new Swiper(".masterclass-block__swiper", {
+  navigation: {
+    nextEl: ".masterclass-block__swiper-button-next",
+    prevEl: ".masterclass-block__swiper-button-prev",
   },
   keyboard: {
     enabled: true,
@@ -41,12 +94,14 @@ const ReviewBlockSwiper = new Swiper(".review-block__swiper", {
   breakpoints: {
     320: {
       slidesPerView: 1,
+			simulateTouch: true,
     },
     768: {
       slidesPerView: 2,
     },
     1024: {
       slidesPerView: 3,
+			simulateTouch: false,
     },
   },
   // autoplay: {
@@ -60,30 +115,49 @@ const ReviewBlockSwiper = new Swiper(".review-block__swiper", {
   // loop: true,
   // loopedSlides: 3,
   slidesPerView: 3,
+  // watchOverflow: true,
+  spaceBetween: 20,
+  // slidesPerGroup: 1,
+  centeredSlides: false,
+});
+
+const reviewBlockSwiper = new Swiper(".review-block__swiper", {
+  navigation: {
+    nextEl: ".review-block__swiper-button-next",
+    prevEl: ".review-block__swiper-button-prev",
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+			simulateTouch: true
+    },
+    768: {
+      slidesPerView: 2,
+			simulateTouch: false
+    }
+  },
+  // autoplay: {
+  // 	delay: 5000,
+  // 	disableOnInteraction: false,
+  // },
+  speed: 500,
+  simulateTouch: true,
+  direction: "horizontal",
+  // autoHeight: 'true',
+  // loop: true,
+  // loopedSlides: 3,
+  // slidesPerView: 2,
   watchOverflow: true,
   spaceBetween: 20,
   // slidesPerGroup: 1,
   centeredSlides: false,
 });
 
-const OtherCardSwiper = new Swiper(".other-card", {
-  navigation: {
-    nextEl: ".other-card__swiper-button-next",
-    prevEl: ".other-card__swiper-button-prev",
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-  slidesPerView: "auto",
-  speed: 200,
-  spaceBetween: 10,
-  simulateTouch: true,
-  direction: "horizontal",
-  watchOverflow: true,
-});
-
-const OtherCardImageSwiper = new Swiper(".card__image", {
+const CardImageSwiper = new Swiper(".card__image", {
   navigation: {
     nextEl: ".card__image-swiper-button-next",
     prevEl: ".card__image-swiper-button-prev",
@@ -96,9 +170,42 @@ const OtherCardImageSwiper = new Swiper(".card__image", {
     enabled: true,
     onlyInViewport: true,
   },
+	breakpoints: {
+		320: {
+			simulateTouch: true,
+		},
+		1024: {
+			simulateTouch: false,
+		}
+	},
   slidesPerView: 1,
   speed: 200,
   spaceBetween: -1,
+  simulateTouch: true,
+  direction: "horizontal",
+  watchOverflow: true,
+});
+
+const OtherCardSwiper = new Swiper(".other-card", {
+  navigation: {
+    nextEl: ".other-card__swiper-button-next",
+    prevEl: ".other-card__swiper-button-prev",
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+	breakpoints: {
+		320: {
+			simulateTouch: true,
+		},
+		1024: {
+			simulateTouch: false,
+		}
+	},
+  slidesPerView: "auto",
+  speed: 200,
+  spaceBetween: 10,
   simulateTouch: true,
   direction: "horizontal",
   watchOverflow: true,
@@ -124,18 +231,16 @@ servicesContentWrapperItem.forEach(function (element, i) {
 
 servicesHeading.forEach(function (element) {
   element.addEventListener("click", function () {
-		servicesHeading.forEach(function (e) {
+    servicesHeading.forEach(function (e) {
       e.classList.remove("active");
     });
-		element.classList.add('active')
+    element.classList.add("active");
 
-		let dataHeadingListNumber = element.getAttribute("data-headingList");
+    let dataHeadingListNumber = element.getAttribute("data-headingList");
 
-		servicesContentWrapperItem.forEach(function (e) {
+    servicesContentWrapperItem.forEach(function (e) {
       e.classList.remove("active");
     });
-
-    
 
     let dataContentList = document.querySelector(
       '[data-contentList="' + dataHeadingListNumber + '"]'
@@ -143,13 +248,6 @@ servicesHeading.forEach(function (element) {
 
     dataContentList.classList.add("active");
   });
-});
-
-const InfoCardShowMore = document.querySelector(".info-card__show-more");
-InfoCardShowMore.addEventListener("click", function () {
-  document.querySelector(".info-card__content").classList.add("active");
-  InfoCardShowMore.classList.add("active");
-  document.querySelector(".detailed-info").classList.add("active");
 });
 
 function debounce(func, wait, immediate) {
@@ -247,14 +345,6 @@ function showMore() {
     });
   }
 }
-
-//! клик по отзывам
-// let revContDiv = document.querySelectorAll('.review-block__slider div')
-// revContDiv.forEach(function(e) {
-// 	e.addEventListener('click', function() {
-// 		document.querySelector('.review-block__container').classList.add('active')
-// 	})
-// });
 
 debounce(headerChanger(), 300);
 debounce(linkChanger(), 300);
