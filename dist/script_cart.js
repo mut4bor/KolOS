@@ -7,7 +7,6 @@ let basketDeliveryDateTextArea = document.querySelector('.basket-delivery__date 
 let basketDeliveryDateLabel = document.querySelector('.basket-delivery__date label');
 let basketDeliveryAdressInput = document.querySelector('#adress')
 let checkboxShipping = document.querySelector(".basket-delivery__shipping");
-// document.querySelector('.basket-delivery__yourself').checked = true
 checkboxShipping.checked = true;
 
 function basketAdressProp() {
@@ -25,7 +24,7 @@ function basketAdressProp() {
 			basketDeliveryDateLabel.innerText = 'Дата самовывоза*';
 			basketDeliveryDateTextArea.value = 'После оплаты с вами свяжутся и уточнят ближайшую дату самовывоза';
 			basketDeliveryAdressInput.setAttribute('disabled', 'disabled');
-			basketDeliveryAdressInput.value = 'Витебский проспект дом 47 корпус 4'
+			basketDeliveryAdressInput.value = 'Витебский проспект дом 47 корпус 2'
     }
   });
 }

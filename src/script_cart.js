@@ -7,7 +7,6 @@ let basketDeliveryDateTextArea = document.querySelector('.basket-delivery__date 
 let basketDeliveryDateLabel = document.querySelector('.basket-delivery__date label');
 let basketDeliveryAdressInput = document.querySelector('#adress')
 let checkboxShipping = document.querySelector(".basket-delivery__shipping");
-// document.querySelector('.basket-delivery__yourself').checked = true
 checkboxShipping.checked = true;
 
 function basketAdressProp() {

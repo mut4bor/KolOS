@@ -30,7 +30,6 @@ const StartBlockSwiper = new Swiper(".start-block__swiper", {
   loop: true,
   loopedSlides: 1,
   slidesPerView: 1,
-  // watchOverflow: true,
   spaceBetween: 30,
   slidesPerGroup: 1,
   centeredSlides: true,
@@ -56,25 +55,16 @@ const ServicesHeadingSwiper = new Swiper(".services-block__heading", {
 	},
 	loop: 'true',
   slidesPerView: 1,
-  speed: 200,
+  speed: 300,
   simulateTouch: true,
   direction: "horizontal",
   watchOverflow: true,
 });
 
 const ServicesSwiper = new Swiper(".services-block__content-wrapper", {
-	// breakpoints: {
-	// 	320: {
-	// 		simulateTouch: true,
-	// 	},
-	// 	1024: {
-	// 		simulateTouch: false,
-	// 	}
-	// },
 	simulateTouch: false,
 	loop: 'true',
   slidesPerView: 1,
-  speed: 200,
   simulateTouch: true,
   direction: "horizontal",
   watchOverflow: true,
@@ -104,20 +94,11 @@ const masterclassBlockSwiper = new Swiper(".masterclass-block__swiper", {
 			simulateTouch: false,
     },
   },
-  // autoplay: {
-  // 	delay: 5000,
-  // 	disableOnInteraction: false,
-  // },
   speed: 500,
   simulateTouch: true,
   direction: "horizontal",
-  // autoHeight: 'true',
-  // loop: true,
-  // loopedSlides: 3,
   slidesPerView: 3,
-  // watchOverflow: true,
   spaceBetween: 20,
-  // slidesPerGroup: 1,
   centeredSlides: false,
 });
 
@@ -140,20 +121,11 @@ const reviewBlockSwiper = new Swiper(".review-block__swiper", {
 			simulateTouch: false
     }
   },
-  // autoplay: {
-  // 	delay: 5000,
-  // 	disableOnInteraction: false,
-  // },
   speed: 500,
   simulateTouch: true,
   direction: "horizontal",
-  // autoHeight: 'true',
-  // loop: true,
-  // loopedSlides: 3,
-  // slidesPerView: 2,
   watchOverflow: true,
   spaceBetween: 20,
-  // slidesPerGroup: 1,
   centeredSlides: false,
 });
 
