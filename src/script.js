@@ -1,3 +1,19 @@
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function () {
+    var context = this,
+      args = arguments;
+    var later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
 const StartBlockSwiper = new Swiper(".start-block__swiper", {
   navigation: {
     nextEl: ".start-block__swiper-button-next",
@@ -129,60 +145,6 @@ const reviewBlockSwiper = new Swiper(".review-block__swiper", {
   centeredSlides: false,
 });
 
-const CardImageSwiper = new Swiper(".card__image", {
-  navigation: {
-    nextEl: ".card__image-swiper-button-next",
-    prevEl: ".card__image-swiper-button-prev",
-  },
-  pagination: {
-    el: ".card__image-pagination",
-    clickable: true,
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-	breakpoints: {
-		320: {
-			simulateTouch: true,
-		},
-		1024: {
-			simulateTouch: false,
-		}
-	},
-  slidesPerView: 1,
-  speed: 200,
-  spaceBetween: -1,
-  simulateTouch: true,
-  direction: "horizontal",
-  watchOverflow: true,
-});
-
-const OtherCardSwiper = new Swiper(".other-card", {
-  navigation: {
-    nextEl: ".other-card__swiper-button-next",
-    prevEl: ".other-card__swiper-button-prev",
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-	breakpoints: {
-		320: {
-			simulateTouch: true,
-		},
-		1024: {
-			simulateTouch: false,
-		}
-	},
-  slidesPerView: "auto",
-  speed: 200,
-  spaceBetween: 10,
-  simulateTouch: true,
-  direction: "horizontal",
-  watchOverflow: true,
-});
-
 const servicesContentWrapperItem = document.querySelectorAll(
   ".services-block__content-wrapper >div"
 );
@@ -222,21 +184,6 @@ servicesHeading.forEach(function (element) {
   });
 });
 
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this,
-      args = arguments;
-    var later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
 
 function headerChanger() {
   if (window.pageYOffset == 0) {

@@ -78,3 +78,58 @@ infoCardShowMore.addEventListener("click", function () {
 		xmarkMoving(detailedInfo, 50);
   }
 });
+
+
+const CardImageSwiper = new Swiper(".card__image", {
+  navigation: {
+    nextEl: ".card__image-swiper-button-next",
+    prevEl: ".card__image-swiper-button-prev",
+  },
+  pagination: {
+    el: ".card__image-pagination",
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+	breakpoints: {
+		320: {
+			simulateTouch: true,
+		},
+		1024: {
+			simulateTouch: false,
+		}
+	},
+  slidesPerView: 1,
+  speed: 200,
+  spaceBetween: -1,
+  simulateTouch: true,
+  direction: "horizontal",
+  watchOverflow: true,
+});
+
+const OtherCardSwiper = new Swiper(".other-card", {
+  navigation: {
+    nextEl: ".other-card__swiper-button-next",
+    prevEl: ".other-card__swiper-button-prev",
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+	breakpoints: {
+		320: {
+			simulateTouch: true,
+		},
+		1024: {
+			simulateTouch: false,
+		}
+	},
+  slidesPerView: "auto",
+  speed: 200,
+  spaceBetween: 10,
+  simulateTouch: true,
+  direction: "horizontal",
+  watchOverflow: true,
+});
